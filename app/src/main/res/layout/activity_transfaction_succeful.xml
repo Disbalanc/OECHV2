@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile.ui.Profile.TransfactionSuccefulActivity"
+    tools:ignore="MissingDefaultResource">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="144dp"
+        android:indeterminateDrawable='@drawable/spin_rotate'
+        android:indeterminateOnly="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="72dp"
+        android:orientation="vertical"
+        android:layout_marginTop="361dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewEnable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/your_rider_is_on_the_way_to_your_destination"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_Track_my_item"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_round"
+        android:backgroundTint="@color/Primary"
+        android:padding="12dp"
+        android:text="Track my item"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="500dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_skip"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_round"
+        android:text="Skip"
+        android:padding="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/Primary"
+        android:layout_marginTop="560dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/Primary"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

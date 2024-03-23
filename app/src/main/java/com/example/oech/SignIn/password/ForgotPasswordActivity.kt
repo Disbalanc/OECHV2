@@ -8,7 +8,7 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
-import com.example.oech_v2.R
+import com.example.oech.R
 import com.example.oech.SignIn.LogInActivity
 
 class ForgotPasswordActivity : AppCompatActivity() {

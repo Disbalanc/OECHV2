@@ -10,9 +10,9 @@ import android.widget.AbsListView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.oech_v2.R
-import com.example.oech_v2.databinding.ActivityChatBinding
-import com.example.oech_v2.databinding.ActivityOneChatBinding
+import com.example.oech.R
+import com.example.oech.databinding.ActivityChatBinding
+import com.example.oech.databinding.ActivityOneChatBinding
 import com.example.telegram.database.CURRENT_UID
 import com.example.telegram.database.NODE_MESSAGES
 import com.example.telegram.database.REF_DATABASE_ROOT

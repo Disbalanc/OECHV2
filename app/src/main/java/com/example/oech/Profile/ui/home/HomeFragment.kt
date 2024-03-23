@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.oech.Adapters.AdsRecycler
 import com.example.oech.Adapters.MyAds
-import com.example.oech_v2.R
+import com.example.oech.R
 
 
 class HomeFragment : Fragment() {

@@ -12,7 +12,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.oech.Profile.ProfileActivity
-import com.example.oech_v2.R
+import com.example.oech.R
 import com.example.oech.SignIn.password.ForgotPasswordActivity
 import com.example.oech.SignUp.CreateAccountActivity
 import com.example.oech.retrofit.ApiHelper

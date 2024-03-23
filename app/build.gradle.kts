@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.oech_v2"
+    namespace = "com.example.oech"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.oech_v2"
-        minSdk = 33
-        targetSdk = 34
+        applicationId = "com.example.oech"
+        minSdk = 27
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -40,12 +40,19 @@ android {
 }
 
 dependencies {
+    implementation ("org.osmdroid:osmdroid-android:6.1.10")
 
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.retrofit2:retrofit:2.10.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.10.0")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 
     implementation ("com.squareup.okhttp3:logging-interceptor:4.7.2")
     implementation ("com.squareup.okhttp3:okhttp:4.7.2")
+
+    implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation("com.google.firebase:firebase-database:20.3.1")
+    implementation("com.google.firebase:firebase-storage:20.3.0")
+    implementation("com.firebaseui:firebase-ui-database:8.0.2")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -56,7 +63,6 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
     implementation("com.google.android.gms:play-services-maps:18.2.0")
-    implementation("com.google.firebase:firebase-database-ktx:20.3.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

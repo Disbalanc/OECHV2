@@ -10,7 +10,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.oech.Profile.ui.home.ChatActivity
-import com.example.oech_v2.R
+import com.example.oech.R
 import com.example.telegram.database.updatePhonesToDatabase
 import com.example.telegram.models.CommonModel
 import java.lang.Exception

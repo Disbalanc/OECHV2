@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.oech.Profile.ui.track.Item
 import com.example.oech.Profile.ui.track.MyAppData
-import com.example.oech_v2.R
+import com.example.oech.R
 
 class Data {
     var statesClon: ArrayList<Item>? = null
@@ -63,7 +63,7 @@ class Send_a_packege : AppCompatActivity() {
         asd.recyclerViewClon!!.adapter = MyAppData(applicationContext, states)
     }
     fun addElements(view: View) {
-        asd.recyclerViewClon!!.getIt
+        //asd.recyclerViewClon!!.getIt
     }
 }
 

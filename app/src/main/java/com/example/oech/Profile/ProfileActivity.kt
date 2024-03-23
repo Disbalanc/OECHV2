@@ -25,8 +25,8 @@ import com.example.oech.Profile.ui.Profile.EditProfileActivity
 import com.example.oech.Profile.ui.home.ChatActivity
 import com.example.oech.Profile.ui.home.HomeFragment
 import com.example.oech.Welcome.RealTimeTrackingActivity
-import com.example.oech_v2.R
-import com.example.oech_v2.databinding.ActivityProfileBinding
+import com.example.oech.R
+import com.example.oech.databinding.ActivityProfileBinding
 import com.example.telegram.database.AUTH
 import com.example.telegram.database.USER
 import com.example.telegram.database.initFirebase

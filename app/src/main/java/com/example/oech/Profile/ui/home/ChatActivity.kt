@@ -5,8 +5,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import chatsData
 import com.example.oech.Adapters.chatsRecycler
-import com.example.oech_v2.R
-import com.example.oech_v2.databinding.ActivityChatBinding
+import com.example.oech.R
+import com.example.oech.databinding.ActivityChatBinding
 import com.example.telegram.database.TYPE_TEXT
 import com.example.telegram.database.USER
 import com.example.telegram.database.saveToMainList

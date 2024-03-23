@@ -1,7 +1,7 @@
 package com.example.oech.Profile.ui.Profile
 
 import androidx.appcompat.app.AppCompatActivity
-import com.example.oech_v2.R
+import com.example.oech.R
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.oech_v2.databinding.FragmentProfileBinding
+import com.example.oech.databinding.FragmentProfileBinding
 
 
 class ProfileFragment : Fragment() {

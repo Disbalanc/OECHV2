@@ -15,7 +15,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.oech.Profile.ProfileActivity
-import com.example.oech_v2.R
+import com.example.oech.R
 import com.example.oech.SignIn.LogInActivity
 import com.example.oech.retrofit.ApiHelper
 import com.example.oech.retrofit.ApiResponse

@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.oech_v2.R
+import com.example.oech.R
 
 class QuickDeliveryActiviti : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

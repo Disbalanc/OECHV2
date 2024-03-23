@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.oech_v2.R;
+import com.example.oech.R;
 
 import java.util.List;
 import java.util.Stack;
@@ -47,7 +47,7 @@ public class MyAppData extends RecyclerView.Adapter<MyViewHolder> {
             holder.editTextTwo.setHint((CharSequence) items.get(position).getState());
             holder.editTextThree.setHint((CharSequence) items.get(position).getPhone());
 
-            holder.get;
+            //holder.get;
         }
         else if (this.getItemViewType(position) == 0 ||
                  this.getItemViewType(position) == 1 ||

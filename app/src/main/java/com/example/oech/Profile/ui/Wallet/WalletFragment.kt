@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.oech_v2.databinding.FragmentWalletBinding
+import com.example.oech.databinding.FragmentWalletBinding
 
 class WalletFragment : Fragment() {
 

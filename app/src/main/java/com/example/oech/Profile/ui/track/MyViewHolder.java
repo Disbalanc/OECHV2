@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.oech_v2.R;
+import com.example.oech.R;
 
 public class MyViewHolder extends RecyclerView.ViewHolder {
     ImageView imageViewTitle;

@@ -2,7 +2,7 @@ package com.example.oech.Profile.ui.Profile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.oech_v2.R
+import com.example.oech.R
 
 class StatementsAndReprortsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

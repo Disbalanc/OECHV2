@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "OECH-V2"
 include(":app")
- 

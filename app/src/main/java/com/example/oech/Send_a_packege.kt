@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.oech.Profile.ui.track.Item
 import com.example.oech.Profile.ui.track.MyAppData
-import com.example.oech.R
+import com.example.oech_v2.R
 
 class Data {
     var statesClon: ArrayList<Item>? = null

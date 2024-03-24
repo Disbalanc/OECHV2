@@ -10,13 +10,19 @@ import retrofit2.http.POST
 
 interface UserApi {
     @FormUrlEncoded
-    @POST("Users")
-    suspend fun login(
-        @Field("email") email: String,
+    @POST("register")  // URL для регистрации
+    fun register(
+        @Field("username") username: String,
         @Field("password") password: String
-    ): Response<User>
+    ): Call<RegistrationResponse>
 
-
-    @POST("Users") // замените на ваш роут для регистрации
-    fun registerUser(@Body userData: User): Call<ApiResponse>
+    @FormUrlEncoded
+    @POST("login")  // URL для логина
+    fun login(
+        @Field("username") username: String,
+        @Field("password") password: String
+    ): Call<LoginResponse>
 }
+
+data class RegistrationResponse(val success: Boolean, val message: String)
+data class LoginResponse(val success: Boolean, val token: String)

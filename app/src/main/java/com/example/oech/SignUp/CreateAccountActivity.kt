@@ -17,11 +17,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.oech.Profile.ProfileActivity
 import com.example.oech.R
 import com.example.oech.SignIn.LogInActivity
-import com.example.oech.retrofit.ApiHelper
-import com.example.oech.retrofit.ApiResponse
-import com.example.oech.retrofit.User
-import com.example.telegram.database.initFirebase
-import com.example.telegram.database.initUser
 import com.example.telegram.utilits.initContacts
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -60,40 +55,9 @@ class CreateAccountActivity : AppCompatActivity() {
         et_confimPassword.addTextChangedListener(textWatcher)
 
         btn_signUp.setOnClickListener{
-            val api = ApiHelper.apiService
-            val userData = User(et_name.text.toString(), et_phone.text.toString(), et_email.text.toString(), et_password.text.toString())
-            val intent = Intent(this, ProfileActivity::class.java)
 
-            CoroutineScope(Dispatchers.IO).launch {
-                api.registerUser(userData).enqueue(object : Callback<ApiResponse> {
-                    override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
-                        if (response.isSuccessful) {
-                            val apiResponse = response.body()
-                            if (apiResponse?.success == true) {
-                                Toast.makeText(applicationContext, "Registration successful", Toast.LENGTH_SHORT).show()
-                                Log.w(ContentValues.TAG, "Registration successful")
-                                startActivity(intent)
-                                finish()
-                                // Обработка успешной регистрации
-                            } else {
-                                Toast.makeText(applicationContext, apiResponse?.message, Toast.LENGTH_SHORT).show()
-                                Log.w(ContentValues.TAG, apiResponse?.message.toString())
-                            }
-                        } else {
-                            Toast.makeText(applicationContext, "Error registering user", Toast.LENGTH_SHORT).show()
-                            Log.w(ContentValues.TAG, "Error registering user")
-                        }
-                    }
-
-                    override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
-                        Toast.makeText(applicationContext, t.toString(), Toast.LENGTH_SHORT).show()
-                        Toast.makeText(applicationContext, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
-
-                    }
-                })
             }
         }
-    }
 
     private val textWatcher: TextWatcher = object : TextWatcher {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}

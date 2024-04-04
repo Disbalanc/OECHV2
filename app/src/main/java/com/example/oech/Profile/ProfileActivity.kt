@@ -28,9 +28,6 @@ import com.example.oech.Welcome.RealTimeTrackingActivity
 import com.example.oech.R
 import com.example.oech.databinding.ActivityProfileBinding
 import com.example.telegram.database.AUTH
-import com.example.telegram.database.USER
-import com.example.telegram.database.initFirebase
-import com.example.telegram.database.initUser
 import com.example.telegram.models.CommonModel
 import com.example.telegram.models.UserModel
 import com.example.telegram.utilits.APP_ACTIVITY
@@ -50,17 +47,6 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
-
-        initFirebase()
-
-        initUser {
-        }
-
-        chatsRecycler().addChat(CommonModel(id = USER.id,image = R.drawable.ic_avatar, fullname =  "Избранное", CountNonReadMessage =  5))
-
-        USER.fullname = "Creator"
         
         val navView: BottomNavigationView = binding.navView
 

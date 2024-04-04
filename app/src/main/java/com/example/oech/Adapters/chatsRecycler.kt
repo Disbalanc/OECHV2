@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import chatsData
 import com.example.oech.Profile.ui.home.OneChatActivity
 import com.example.oech.R
-import com.example.telegram.database.initUser
 import com.example.telegram.models.CommonModel
 import com.example.telegram.utilits.initContacts
 

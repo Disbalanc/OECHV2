@@ -15,11 +15,6 @@ import com.example.oech.Profile.ProfileActivity
 import com.example.oech.R
 import com.example.oech.SignIn.password.ForgotPasswordActivity
 import com.example.oech.SignUp.CreateAccountActivity
-import com.example.oech.retrofit.ApiHelper
-import com.example.oech.retrofit.ApiResponse
-import com.example.oech.retrofit.User
-import com.example.telegram.database.initFirebase
-import com.example.telegram.database.initUser
 import com.example.telegram.utilits.initContacts
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -45,54 +40,9 @@ class LogInActivity : AppCompatActivity() {
         passwordEditText.addTextChangedListener(textWatcher)
 
         btnLogIn.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
-
-            CoroutineScope(Dispatchers.IO).launch {
-                try {
-                    val response = ApiHelper.apiService.login(
-                        emailEditText.text.toString(),
-                        passwordEditText.text.toString()
-                    )
-                    if (response.isSuccessful) {
-                        val loginResponse = response.body()
-                        runOnUiThread {
-                            Toast.makeText(
-                                applicationContext,
-                                "Вы успешно вошли!",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                        Log.d(ContentValues.TAG, "Вы успешно вошли!")
-                        startActivity(intent)
-                        finish()
-                        // Обработайте ответ сервера, например, сохраните токен пользователя
-                    } else {
-                        runOnUiThread {
-                            Toast.makeText(
-                                applicationContext,
-                                "Такого пароля или почты не зарегистрировано",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                        Log.w(ContentValues.TAG, "Такого пароля или почты не зарегистрировано")
-                        // Обработайте ошибку, например, покажите сообщение об ошибке
-                    }
-                } catch (e: Exception) {
-                    runOnUiThread {
-                        Toast.makeText(
-                            applicationContext,
-                            e.stackTraceToString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                    e.printStackTrace()
-                    // Обработайте ошибку, например, покажите сообщение об ошибке
-                }
-
 
             }
         }
-    }
 
     private val textWatcher: TextWatcher = object : TextWatcher {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}

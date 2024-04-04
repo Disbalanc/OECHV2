@@ -40,21 +40,23 @@ android {
 }
 
 dependencies {
-    implementation ("org.osmdroid:osmdroid-android:6.1.10")
 
-    implementation ("com.squareup.retrofit2:retrofit:2.10.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.10.0")
+
+    implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    implementation("io.ktor:ktor-client-cio:3.0.0-beta-1")
+    implementation("io.github.jan-tennert.supabase:postgrest-kt:2.3.0-coil3d1")
+
+    implementation ("com.squareup.retrofit2:converter-moshi:2.11.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+
+    implementation ("org.osmdroid:osmdroid-android:6.1.18")
+
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 
-    implementation ("com.squareup.okhttp3:logging-interceptor:4.7.2")
-    implementation ("com.squareup.okhttp3:okhttp:4.7.2")
+    implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.12")
 
-    implementation("com.google.firebase:firebase-auth:22.3.1")
-    implementation("com.google.firebase:firebase-database:20.3.1")
-    implementation("com.google.firebase:firebase-storage:20.3.0")
-    implementation("com.firebaseui:firebase-ui-database:8.0.2")
-
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")

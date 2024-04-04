@@ -1,7 +1,6 @@
 package com.example.telegram.utilits
 
 import android.media.MediaPlayer
-import com.example.telegram.database.getFileFromStorage
 import java.io.File
 
 class AppVoicePlayer {
@@ -17,11 +16,6 @@ class AppVoicePlayer {
             }
         } else {
             mFile.createNewFile()
-            getFileFromStorage(mFile, fileUrl) {
-                startPlay {
-                    function()
-                }
-            }
         }
     }
 

@@ -8,8 +8,6 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.oech.R
-import com.example.telegram.database.CURRENT_UID
-import com.example.telegram.database.getFileFromStorage
 import com.example.telegram.ui.message_recycler_view.views.MessageView
 import com.example.telegram.utilits.WRITE_FILES
 import com.example.telegram.utilits.asTime
@@ -35,54 +33,13 @@ class HolderFileMessage(view: View) : RecyclerView.ViewHolder(view), MessageHold
     private val chatReceivedProgressBar:ProgressBar = view.findViewById(R.id.chat_received_progress_bar)
 
     override fun drawMessage(view: MessageView) {
-        if (view.from == CURRENT_UID) {
-            blocReceivedFileMessage.visibility = View.GONE
-            blocUserFileMessage.visibility = View.VISIBLE
-            chatUserFileMessageTime.text = view.timeStamp.asTime()
-            chatUserFilename.text = view.text
-        } else {
-            blocReceivedFileMessage.visibility = View.VISIBLE
-            blocUserFileMessage.visibility = View.GONE
-            chatReceivedFileMessageTime.text = view.timeStamp.asTime()
-            chatReceivedFilename.text = view.text
-        }
     }
 
     override fun onAttach(view: MessageView) {
-       if (view.from == CURRENT_UID)chatUserBtnDownload.setOnClickListener { clickToBtnFile(view) }
-       else chatReceivedBtnDownload.setOnClickListener {clickToBtnFile(view) }
     }
 
     private fun clickToBtnFile(view: MessageView) {
-        if (view.from == CURRENT_UID){
-            chatUserBtnDownload.visibility = View.INVISIBLE
-            chatUserProgressBar.visibility = View.VISIBLE
-        } else {
-            chatReceivedBtnDownload.visibility = View.INVISIBLE
-            chatReceivedProgressBar.visibility = View.VISIBLE
-        }
 
-        val file = File(
-            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
-            view.text
-        )
-
-        try {
-            if (checkPermission(WRITE_FILES)){
-                file.createNewFile()
-                getFileFromStorage(file,view.fileUrl){
-                    if (view.from == CURRENT_UID){
-                        chatUserBtnDownload.visibility = View.VISIBLE
-                        chatUserProgressBar.visibility = View.INVISIBLE
-                    } else {
-                        chatReceivedBtnDownload.visibility = View.VISIBLE
-                        chatReceivedProgressBar.visibility = View.INVISIBLE
-                    }
-                }
-            }
-        }catch (e:Exception){
-            showToast(e.message.toString())
-        }
     }
 
 

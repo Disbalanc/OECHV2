@@ -6,7 +6,6 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.oech.R
-import com.example.telegram.database.CURRENT_UID
 import com.example.telegram.ui.message_recycler_view.views.MessageView
 import com.example.telegram.utilits.asTime
 import com.example.telegram.utilits.downloadAndSetImage
@@ -21,19 +20,7 @@ class HolderImageMessage(view: View) : RecyclerView.ViewHolder(view), MessageHol
 
 
     override fun drawMessage(view: MessageView) {
-        if (view.from == CURRENT_UID) {
-            blocReceivedImageMessage.visibility = View.GONE
-            blocUserImageMessage.visibility = View.VISIBLE
-            chatUserImage.downloadAndSetImage(view.fileUrl)
-            chatUserImageMessageTime.text =
-                view.timeStamp.asTime()
-        } else {
-            blocReceivedImageMessage.visibility = View.VISIBLE
-            blocUserImageMessage.visibility = View.GONE
-            chatReceivedImage.downloadAndSetImage(view.fileUrl)
-            chatReceivedImageMessageTime.text =
-                view.timeStamp.asTime()
-        }
+
     }
 
     override fun onAttach(view: MessageView) {

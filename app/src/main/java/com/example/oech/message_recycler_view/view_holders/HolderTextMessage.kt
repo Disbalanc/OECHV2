@@ -5,7 +5,6 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.oech.R
-import com.example.telegram.database.CURRENT_UID
 import com.example.telegram.ui.message_recycler_view.views.MessageView
 import com.example.telegram.utilits.asTime
 
@@ -19,18 +18,6 @@ class HolderTextMessage(view: View) : RecyclerView.ViewHolder(view), MessageHold
 
 
     override fun drawMessage(view: MessageView) {
-        if (view.from == CURRENT_UID) {
-            blocUserMessage.visibility = View.VISIBLE
-            blocReceivedMessage.visibility = View.GONE
-            chatUserMessage.text = view.text
-            chatUserMessageTime.text =
-                view.timeStamp.asTime()
-        } else {
-            blocUserMessage.visibility = View.GONE
-            blocReceivedMessage.visibility = View.VISIBLE
-            chatReceivedMessage.text = view.text
-        }
-
     }
 
     override fun onAttach(view: MessageView) {

@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.oech.Profile.ui.home.ChatActivity
 import com.example.oech.R
-import com.example.telegram.database.updatePhonesToDatabase
 import com.example.telegram.models.CommonModel
 import java.lang.Exception
 import java.text.SimpleDateFormat
@@ -84,7 +83,6 @@ fun initContacts() {
             }
         }
         cursor?.close()
-        updatePhonesToDatabase(arrayContacts)
     }
 }
 
